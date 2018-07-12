@@ -7,11 +7,11 @@
 <div ng-repeat='item in items'>
   <span>{{item.title}}</span>
   <input ng-model='item.quantity'>
-  <span>{{item.price | currency}}</span>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单价{{item.price }}&nbsp;&nbsp;&nbsp;&nbsp总价{{currency}}</span>
   <span>{{item.price * item.quantity | currency}}</span>
-  <button ng-click="remove($index)">Remove</button>
+  <button ng-click="remove($index)">&nbsp;&nbsp;&nbsp;&nbsp;Remove</button>
 </div>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script src="../angular.js"></script>
 <script>
   function CartController($scope) {
     $scope.items = [
